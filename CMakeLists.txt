@@ -5,10 +5,15 @@ include(CTest)
 enable_testing()
 
 
-#include("build/conanbuildinfo.cmake")
-#conan_basic_setup()
+
+
+include("build/conanbuildinfo.cmake")
+conan_basic_setup()
+
+find_package(ODBC REQUIRED)
+
 add_executable(koza main.cpp)
-#target_link_libraries(koza ${CONAN_LIBS})
+target_link_libraries(koza ${CONAN_LIBS})
 
 set(CPACK_PROJECT_NAME ${PROJECT_NAME})
 set(CPACK_PROJECT_VERSION ${PROJECT_VERSION})

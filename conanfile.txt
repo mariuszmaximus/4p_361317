@@ -1,6 +1,10 @@
 [requires]
 poco/1.9.4
 fmt/8.1.1
+rabbitmq-c/0.11.0
+pthreads4w/3.0.0
+gtest/1.11.0
+spdlog/1.10.0
 
 [generators]
-visual_studio
+cmake
